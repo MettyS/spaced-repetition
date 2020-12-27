@@ -17,8 +17,6 @@ body {
   font-family: 'Nanum Gothic',/*"Ubuntu",*/ sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
 }
 
 button {
@@ -61,6 +59,7 @@ header {
   border-width: 1px;
   border-color: #5d59f6;
   /* color-adjust: exact; */
+  margin-bottom: 40px;
 }
 header :not(h1){
   text-align: center;
@@ -100,7 +99,7 @@ header div {
   font-weight: 500;
   font-size: 110%;
 }
-header span {
+header span, footer span {
   color: white;
   font-style: italic;
 }
@@ -123,6 +122,28 @@ nav a, header span {
   border-bottom: 1px solid transparent;
 }
 
+footer {
+  padding: 15px 5px 15px 40px;
+  display: flex;
+  flex-flow: row;
+  border-top: 1px solid #5d59f6;
+  margin-top: 40px;
+}
+
+footer #signature {
+  flex: 1;
+  text-align: center;
+  align-self: center;
+}
+
+footer .panel-middle {
+  flex: 2;
+}
+
+footer nav {
+  flex: 1;
+}
+
 .Button {
   font-size: 100%;
   border-radius: 20px;
@@ -134,14 +155,10 @@ nav a, header span {
 }
 
 
-
-
-main p {
-  margin: 0px;
+section#registration, section#login , section#dashboard{
+  height: 100vh;
 }
-section h2 {
-  text-align: center;
-}
+
 form {
   margin-left: 20%;
   margin-right: 20%;
@@ -151,7 +168,7 @@ form div {
   display: flex;
   justify-content: space-between;
 }
-form footer {
+form .form-bottom {
   display: flex;
   flex-flow: column;
 }
@@ -160,13 +177,19 @@ form .Button {
 }
 
 
+section h2 {
+  text-align: center;
+}
+
+
+
 main {
   font-size: 120%;
 
 }
 
 main p {
-  margin-top: 40px;
+  margin: 0px;
   padding-left:40px;
 }
 
@@ -208,10 +231,57 @@ form div {
 }
 
 
+@media all and (max-width: 900px) {
+  footer #signature {
+    flex:2;
+  }
+}
 
+@media all and (max-width: 800px) {
+  footer nav {
+    flex:2;
+  }
+}
 
+@media all and (max-width: 700px) {
+  footer .panel-middle {
+    flex: 1;
+  }
+}
 
+@media all and (max-width: 615px) {
 
+  body {
+    text-align: center;
+  }
+  header {
+    padding-left: 0px;
+    display: block;
+  }
+  nav {
+    justify-content: center;
+  }
+  nav a{
+    margin-right: 20px;
+  }
+
+  form {
+    margin-left: 10%;
+    margin-right:10%;
+  }
+
+  footer .panel-middle {
+    flex: 0;
+  }
+
+  footer #signature {
+    flex: 5;
+  }
+
+  footer nav {
+    flex: 5;
+  }
+}
 
 @media all and (max-width: 450px) {
 
@@ -233,38 +303,23 @@ form div {
     margin-left: 50px;
     margin-right: 50px;
   }
-}
 
-@media all and (max-width: 600px) {
-
-  body {
-    text-align: center;
-  }
-  header {
+  footer {
     padding-left: 0px;
-    display: block;
-  }
-  nav {
-    justify-content: center;
-  }
-  nav a{
-    margin-right: 20px;
-  }
-
-  form {
-    margin-left: 10%;
-    margin-right:10%;
+    flex-flow: column-reverse;
   }
 }
+
 
 @media all and (min-width: 700px) {
   form {
     margin-left: 24%;
     margin-right: 24%;
   }
+
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 920px) {
   form {
     margin-left: 30%;
     margin-right:30%;

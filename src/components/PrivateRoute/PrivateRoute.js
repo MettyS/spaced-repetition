@@ -9,17 +9,27 @@ export default function PrivateRoute({ component, ...props }) {
       {...props}
       render={componentProps => (
         <UserContext.Consumer>
-          {userContext =>
-            !!userContext.user.id
-              ? <Component {...componentProps} />
-              : (
-                <Redirect
-                  to={{
-                    pathname: userContext.user.idle ? '/login' : '/register',
-                    state: { from: componentProps.location },
-                  }}
-                />
-              )
+          {userContext => {
+              if(!!userContext.user.id){
+
+                
+                return ( <Component {...componentProps} /> );
+
+                
+              }
+              else {
+                return (
+                  <Redirect
+                    to={{
+                      pathname: userContext.user.idle ? '/login' : '/register',
+                      state: { from: componentProps.location },
+                    }}
+                  />
+                );
+              }
+            
+          }
+            
           }
         </UserContext.Consumer>
       )}

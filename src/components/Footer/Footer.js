@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import './Footer.css'
 
-class Header extends Component {
+class Footer extends Component {
   static contextType = UserContext
 
   handleLogoutClick = () => {
@@ -12,7 +12,6 @@ class Header extends Component {
   }
 
   renderLogoutLink() {
-    console.log('users name: ', this.context.user.name);
     return (
       <div>
         <div>
@@ -22,9 +21,7 @@ class Header extends Component {
         </div>
         <nav>
           <Link
-            onClick={this.handleLogoutClick}
-            to='/login'
-            id='logout'>
+            to='#logout'>
             Logout
           </Link>
         </nav>
@@ -35,27 +32,24 @@ class Header extends Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login'>Login</Link>
-        {' '}
-        <Link to='/register'>Sign up</Link>
+        <Link to='/login'>Spaced repetition</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header>
-        <h1>
-          <Link to='/'>
-            Spaced repetition
-          </Link>
-        </h1>
+      <footer>
+        <span id='signature'>
+          Created by Metty Schroeder
+        </span>
+        <div className='panel-middle'></div>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-      </header>
+      </footer>
     );
   }
 }
 
-export default Header
+export default Footer

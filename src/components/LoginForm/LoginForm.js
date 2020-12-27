@@ -5,15 +5,16 @@ import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
 
 class LoginForm extends Component {
-  static defaultProps = {
-    onLoginSuccess: () => { }
-  }
-
   static contextType = UserContext
 
   state = { error: null }
 
   firstInput = React.createRef()
+  static defaultProps = {
+    onLoginSuccess: () => {}
+  }
+
+  
 
   handleSubmit = ev => {
     ev.preventDefault()

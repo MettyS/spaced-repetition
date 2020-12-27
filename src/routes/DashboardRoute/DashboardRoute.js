@@ -29,8 +29,10 @@ class DashboardRoute extends Component {
     console.log('lang: ',languageName);
     return (
       <section id='dashboard' className='margin-container margin-bar'>
-        <h3>{languageName}</h3>
-        <Button onClick={this.handleButtonClick}>start practicing</Button>
+        <div className='dashboard-top'>
+          <h2>{languageName}</h2>
+          <Button onClick={this.handleButtonClick}><Link to='/learn' className='button-link'>start practicing</Link></Button>
+        </div>
 
         <WordSummaryList />
       </section>

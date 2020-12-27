@@ -44,6 +44,10 @@ a:hover {
   color:cornsilk;
 }
 
+.button-link:link , .button-link:active,
+.button-link:visited, .button-link:hover {
+  color:black;
+}
 
 header {
   padding-left: 20px;
@@ -144,19 +148,88 @@ footer nav {
   flex: 1;
 }
 
+
+
 .Button {
   font-size: 100%;
   border-radius: 20px;
   border-style: none;
-  border-image: none;
+  border-image: none; 
   background-color: #FDFDFD;
   padding: 5px;
+  width: 175px;
+}
+
+form .Button {
   width: 100px;
 }
 
 
-section#registration, section#login , section#dashboard{
+section#registration, section#login , section#dashboard {
   height: 100vh;
+}
+
+section#registration h2, section#login h2{
+    text-align: center;
+}
+
+section#dashboard {
+  
+  padding-left: 40px;
+}
+
+.dashboard-top {
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #AB95FD;
+}
+
+.dashboard-top * {
+  display: inline;
+
+} 
+
+.dashboard-top h2 {
+  margin-top: 0px;
+  padding: 20px 0px 20px 0px
+}
+
+.dashboard-top .Button {
+  margin-left: 25%;
+}
+
+.word-summary-list-container .wordsummarylist-panel-top {
+  padding-left: 40px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 30px;
+}
+
+.word-summary {
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #AB95FD;
+  border-bottom: 1px solid #AB95FD;
+}
+.word-summary h3, .word-summary h4 {
+  margin: 0px;
+}
+
+.word-summary .word-panel-top {
+  margin-bottom: 5px;
+}
+
+.word-summary .word-panel-bottom {
+  font-size: 80%;
+  margin-bottom: 5px;
 }
 
 form {
@@ -176,10 +249,6 @@ form .Button {
   align-self: center;
 }
 
-
-section h2 {
-  text-align: center;
-}
 
 
 

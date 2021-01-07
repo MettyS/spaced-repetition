@@ -10,12 +10,9 @@ export default function PrivateRoute({ component, ...props }) {
       render={componentProps => (
         <UserContext.Consumer>
           {userContext => {
+            // if the user exists
               if(!!userContext.user.id){
-
-                
                 return ( <Component {...componentProps} /> );
-
-                
               }
               else {
                 return (

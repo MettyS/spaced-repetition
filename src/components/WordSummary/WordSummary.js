@@ -8,10 +8,10 @@ class WordSummary extends Component {
       <li className='word-summary'>
         <div className='word-panel-top'>
           <div className='wordtop-panel-left'>
-            <h3>{word.original}</h3>
+            <h4>{word.original}</h4>
           </div>
           <div className='wordtop-panel-right'>
-            <h4>{word.translation}</h4>
+            <h5>{word.translation}</h5>
           </div>
 
         </div>

@@ -17,7 +17,7 @@ class WordSummaryList extends Component {
     return (
       <div className='word-summary-list-container'>
         <div className='wordsummarylist-panel-top'>
-        {`the total correct is ${totalCorrect}`}
+        {`Total correct answers: ${totalCorrect}`}
         </div>
         <ul id='word-summary-list'>
           {items}

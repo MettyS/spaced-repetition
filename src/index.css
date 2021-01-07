@@ -19,6 +19,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h4 {
+  margin: 0px;
+}
+
+h5 {
+  margin: 0px;
+}
+
 button {
   font-family: 'Inter', sans-serif;
 }
@@ -200,6 +208,10 @@ section#dashboard {
   margin-left: 25%;
 }
 
+#practice-words-title {
+  margin-left: 40px;
+}
+
 .word-summary-list-container .wordsummarylist-panel-top {
   padding-left: 40px;
 }
@@ -312,6 +324,15 @@ form div {
   }
 }
 
+@media all and (max-width: 775px) {
+  .word-summary {
+    /* flex-shrink: 0;
+    flex-basis: content; */
+    white-space: nowrap;
+    width: 40%;
+  }
+}
+
 @media all and (max-width: 700px) {
   footer .panel-middle {
     flex: 1;
@@ -319,6 +340,11 @@ form div {
 }
 
 @media all and (max-width: 615px) {
+
+  .word-summary {
+    width: 80%
+  }
+
 
   body {
     text-align: center;
@@ -353,6 +379,19 @@ form div {
 }
 
 @media all and (max-width: 450px) {
+
+  ul {
+    padding-left: 0px;
+  }
+
+  .dashboard-top {
+    flex-flow: column;
+    margin-right: 40px;
+    padding-left: 0px;
+  }
+  .dashboard-top .Button {
+    margin-left: 0px;
+  }
 
   .margin-container {
     margin-left: 0px;

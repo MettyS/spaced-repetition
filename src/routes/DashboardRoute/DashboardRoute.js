@@ -7,6 +7,7 @@ import WordSummaryList from '../../components/WordSummaryList/WordSummaryList';
 import Button from '../../components/Button/Button';
 
 class DashboardRoute extends Component {
+  
   static contextType = UserContext
 
   componentDidMount() {
@@ -31,9 +32,9 @@ class DashboardRoute extends Component {
       <section id='dashboard' className='margin-container margin-bar'>
         <div className='dashboard-top'>
           <h2>{languageName}</h2>
-          <Button onClick={this.handleButtonClick}><Link to='/learn' className='button-link'>start practicing</Link></Button>
+          <Button onClick={this.handleButtonClick}><Link to='/learn' className='button-link'>Start practicing</Link></Button>
         </div>
-
+        <h3 id='practice-words-title'>Words to practice</h3>
         <WordSummaryList />
       </section>
     );

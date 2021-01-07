@@ -34,7 +34,7 @@ describe(`User story: User's dashboard`, function() {
         cy.get('h2')
           .should('contain', language.name)
 
-        cy.root()
+        cy.get('div')
           .should(
             'contain',
             `Total correct answers: ${language.total_score}`,

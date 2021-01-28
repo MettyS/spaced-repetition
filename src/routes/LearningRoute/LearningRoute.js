@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import UserContext from '../../contexts/UserContext';
+import LearningPage from '../../components/LearningPage/LearningPage';
+import LanguageApiService from '../../services/language-api-service'
+
 
 class LearningRoute extends Component {
   static contextType = UserContext;
+  state = {
+    head: null
+  }
+
+  componentDidMount = () => {
+    LanguageApiService.getHead()
+      .then(res => {
+        console.log('recieved this head: ', res);
+        this.setState({head: res})
+      })
+  }
 
   render() {
     const languageName = this.context.language;
-    console.log('lAnGuAgE: ',languageName);
+    const { head } = this.state
+
+    const pageContent = head ? (<LearningPage head={head} />) : 'Loading...'
 
     return (
-      <section>
-        implement and style me
+      <section id='learning'>
+        {pageContent}
       </section>
     );
   }

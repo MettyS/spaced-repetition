@@ -1,6 +1,7 @@
 # Spaced Repetition Capstone
 
-Client Deployment: https://spaced-repetition-ec4jwgy7k.vercel.app/login
+Client Deployment: https://spaced-repetition-mupcwo2pa.vercel.app/login
+
 API Deployment: https://stark-temple-43952.herokuapp.com/
 
 

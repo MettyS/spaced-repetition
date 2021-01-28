@@ -135,7 +135,7 @@ class LearningPage extends Component {
     const isCorrect = (answer === guess);
 
     return (
-      <div className='learning-body'>
+      <div className='result-body'>
         <h2>{isCorrect ? 'You were correct! :D' : 'Good try, but not quite right :('}</h2>
         <div className='DisplayFeedback'>
           <p>{`The correct translation for ${prevWord} was ${answer} and you chose ${guess}!`}</p>

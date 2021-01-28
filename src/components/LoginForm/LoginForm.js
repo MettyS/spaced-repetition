@@ -44,6 +44,7 @@ class LoginForm extends Component {
   render() {
     const { error } = this.state
     return (
+      <>
       <form
         className='LoginForm'
         onSubmit={this.handleSubmit}
@@ -77,6 +78,11 @@ class LoginForm extends Component {
           Login
         </Button>
       </form>
+      <div className='about'>
+        <p>Spaced repetition is a proof-of-concept demo for learning a language using spaced-repetition implemented with a linked list</p>
+        <p>Demo Credentials: username:  BobbyJoe  |  password:  My123!@# </p>
+      </div>
+      </>
     )
   }
 }

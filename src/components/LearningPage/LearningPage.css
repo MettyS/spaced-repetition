@@ -6,6 +6,10 @@ span {
   height: 100vh;
 }
 
+.result-body {
+  margin-left: 100px;
+}
+
 .learning-page p {
   padding: 0;
 }

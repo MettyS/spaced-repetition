@@ -83,8 +83,8 @@ class LearningPage extends Component {
           </form>
 
           <div className='stats'>
-            <div><h5>{`correct answers: ${wordCorrectCount}`}</h5></div>
-            <div><h5>{`incorrect answers: ${wordIncorrectCount}`}</h5></div>
+            <div>{`correct answers: ${wordCorrectCount}`}</div>
+            <div>{`incorrect answers: ${wordIncorrectCount}`}</div>
           </div>
         </div>
       </div>
@@ -113,8 +113,8 @@ class LearningPage extends Component {
           </form>
 
           <div className='stats'>
-            <div><h5>{`You have answered this word correctly ${head.wordCorrectCount} times.`}</h5></div>
-            <div><h5>{`You have answered this word incorrectly ${head.wordIncorrectCount} times.`}</h5></div>
+            <div>{`You have answered this word correctly ${head.wordCorrectCount} times.`}</div>
+            <div>{`You have answered this word incorrectly ${head.wordIncorrectCount} times.`}</div>
           </div>
         </div>
       </div>

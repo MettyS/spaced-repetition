@@ -9,7 +9,7 @@
 }
 
 html {
-  background-color: #7F7DF8;/*#F8F8F8;#eaffff;#C6FDFD;*/
+  background-color: #b7b6f2;/*#F8F8F8;#eaffff;#C6FDFD;*/
 } 
 body {
   margin: 0;
@@ -39,17 +39,17 @@ a {
   font-family: 'Inter', sans-serif;
 }
 a:link {
-  color: white;
+  color: #2d2bab;
   text-decoration: none;
 }
 a:active {
-  color: white;
+  color: #2d2bab;
 }
 a:visited {
-  color: white;
+  color: #2d2bab;
 }
 a:hover {
-  color:cornsilk;
+  color: #2d2bab;
 }
 
 .button-link:link , .button-link:active,
@@ -66,7 +66,7 @@ header {
   /* justify-content: center; */
   align-items: center;
   font-family: 'Inter', sans-serif;
-  background-color: #7F7DF8;
+  background-color: #b7b6f2;
   border-style: solid;
   border-width: 1px;
   border-color: #5d59f6;
@@ -78,20 +78,20 @@ header :not(h1){
 }
 
 header a:link {
-  color: white;
+  color: #2d2bab;
   text-decoration: none;
 }
 
 header a:active {
-  color: white;
+  color: #2d2bab;
 }
 header a:visited {
-  color:white;
+  color:#2d2bab;
 }
 h1 a:visited {
-  color: white;
+  color: #2d2bab;
 }
-nav a:hover {
+nav a:hover, .nav a:hover {
   border-bottom: 1px solid
 }
 
@@ -112,11 +112,11 @@ header div {
   font-size: 110%;
 }
 header span, footer span {
-  color: white;
+  color: #2d2bab;
   font-style: italic;
 }
 
-nav {
+nav, .nav {
   /* display: inline-flex; */
   flex: 1;
   display: flex;
@@ -126,7 +126,7 @@ nav {
   font-size: 110%;
 }
 
-nav a, header span {
+nav a, header span, .nav a {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
@@ -152,7 +152,7 @@ footer .panel-middle {
   flex: 2;
 }
 
-footer nav {
+footer .nav {
   flex: 1;
 }
 
@@ -213,7 +213,7 @@ section#dashboard {
 }
 
 .word-summary-list-container .wordsummarylist-panel-top {
-  padding-left: 40px;
+  padding-left: 0px;
 }
 
 ul {
@@ -299,16 +299,22 @@ form div {
 }
 
 .er-msg p {
+  font-weight: 150%;
   padding: 0;
   margin: 0;
   margin-bottom: 5px;
   border-style: none;
-  color:rgb(255, 228, 224);
+  color:rgb(58, 18, 12);
 }
 
 .er-msg {
   margin: 0;
   padding: 0;
+}
+
+#practice-words-title {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 
@@ -319,7 +325,7 @@ form div {
 }
 
 @media all and (max-width: 800px) {
-  footer nav {
+  footer .nav {
     flex:2;
   }
 }
@@ -345,6 +351,9 @@ form div {
     width: 80%
   }
 
+  section#registration, section#login , section#dashboard {
+    height: 100%;
+  }
 
   body {
     text-align: center;
@@ -353,10 +362,10 @@ form div {
     padding-left: 0px;
     display: block;
   }
-  nav {
+  nav, .nav {
     justify-content: center;
   }
-  nav a{
+  nav a, .nav a{
     margin-right: 20px;
   }
 
@@ -373,12 +382,19 @@ form div {
     flex: 5;
   }
 
-  footer nav {
+  footer .nav {
     flex: 5;
+  }
+
+  .result-body {
+    margin-left: 0px;
   }
 }
 
 @media all and (max-width: 450px) {
+
+
+  
 
   ul {
     padding-left: 0px;

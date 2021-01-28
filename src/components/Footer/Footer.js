@@ -19,21 +19,22 @@ class Footer extends Component {
             {this.context.user.name}
           </span>
         </div>
-        <nav>
-          <Link
-            to='#logout'>
+        <div className='nav'>
+        <Link
+            onClick={this.handleLogoutClick}
+            to='/login'>
             Logout
           </Link>
-        </nav>
+        </div>
       </div>
     )
   }
 
   renderLoginLink() {
     return (
-      <nav>
-        <Link to='/login'>Spaced repetition</Link>
-      </nav>
+      <div className='nav' >
+        <Link to='/'>Spaced repetition</Link>
+      </div>
     )
   }
 

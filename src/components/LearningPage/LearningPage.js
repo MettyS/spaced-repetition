@@ -4,6 +4,8 @@ import LanguageApiService from '../../services/language-api-service';
 import Button from '../Button/Button'
 import { Input, Label } from '../Form/Form'
 
+import './LearningPage.css'
+
 class LearningPage extends Component {
 
   constructor(props) {
@@ -74,7 +76,7 @@ class LearningPage extends Component {
           <form onSubmit={this.handleGuess}>
             <Label htmlFor='learn-guess-input'>What's the translation for this word?</Label>
             <Input required type='text' id='learn-guess-input' name='guess' placeholder='abc' />
-            <Button type='submit'>
+            <Button type='submit' className='learning-btn'>
             Submit your answer
             </Button>
             
@@ -104,7 +106,7 @@ class LearningPage extends Component {
           <form onSubmit={this.handleGuess}>
             <Label htmlFor='learn-guess-input'>What's the translation for this word?</Label>
             <Input required type='text' id='learn-guess-input' name='guess' placeholder='abc' />
-            <Button type='submit'>
+            <Button type='submit' className='learning-btn'>
               Submit your answer
             </Button>
             
@@ -128,7 +130,8 @@ class LearningPage extends Component {
 
   renderResult = (answer, totalScore, guess, prevWord) => {
     // const { word, answer, totalScore, guess, prevWord } = this.state;
-    console.log('ANSWER: ', answer)
+    console.log('ANSWER: ', answer);
+    console.log('GUESS: ', guess);
     const isCorrect = (answer === guess);
 
     return (

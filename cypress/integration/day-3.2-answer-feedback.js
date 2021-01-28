@@ -111,7 +111,7 @@ describe(`User story: Answer feedback`, function() {
   })
 
   context(`Given guess is correct`, () => {
-    const guess = 'test-guess-correct'
+    const guess = 'test-answer-from-correct-guess'
 
     beforeEach(() => {
       cy.route({
